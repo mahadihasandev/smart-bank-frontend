@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useAuthStore } from '@/store/useAuthStore';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api', // Point to backend server
+  baseURL: 'https://smart-bank-jet.vercel.app/api', // Point to backend server
   headers: {
     'Content-Type': 'application/json',
   },
