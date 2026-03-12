@@ -36,7 +36,7 @@ export default function DashboardPage() {
 
   if (!mounted || !user) return null;
 
-  const totalBorrowed = loans?.filter((l: any) => l.status === "approved").reduce((acc: number, l: any) => acc + l.amount, 0) || 0;
+  const totalBorrowed = loans?.filter((l: any) => l.status === "approved" || l.status === "pending").reduce((acc: number, l: any) => acc + l.amount, 0) || 0;
   
   // Dummy data for credit score if not brought deeply via API
   const creditScore = 740;
@@ -100,7 +100,7 @@ export default function DashboardPage() {
               </div>
             </div>
             <p className="text-muted-foreground text-sm font-medium mb-1">Active Loans</p>
-            <h2 className="text-4xl font-bold tracking-tight">{loans?.filter((l: any) => l.status === "approved").length || 0}</h2>
+            <h2 className="text-4xl font-bold tracking-tight">{loans?.filter((l: any) => l.status === "approved" || l.status === "pending").length || 0}</h2>
           </motion.div>
         </div>
 
