@@ -73,7 +73,7 @@ export default function Home() {
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
             </Link>
             <Link 
-              href="/login" 
+              href={user ? "/dashboard" : "/register"} 
               className="w-full sm:w-auto px-10 py-5 glass text-foreground font-bold rounded-full flex items-center justify-center hover:bg-white/10 dark:hover:bg-white/5 transition-all text-xl border border-white/20 dark:border-white/10"
             >
               Access Dashboard
