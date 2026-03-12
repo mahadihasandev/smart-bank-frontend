@@ -164,9 +164,9 @@ export default function Home() {
                      <span className="font-bold text-lg">36 Months</span>
                    </div>
                  </div>
-                 <button className="w-full mt-8 py-4 bg-primary text-primary-foreground font-bold rounded-xl text-lg hover:bg-primary/90 transition-colors">
+                 <Link href="/register" className="w-full mt-8 py-4 bg-primary text-primary-foreground font-bold rounded-xl text-lg hover:bg-primary/90 transition-colors flex items-center justify-center">
                    Accept Offer
-                 </button>
+                 </Link>
                </div>
             </div>
           </div>

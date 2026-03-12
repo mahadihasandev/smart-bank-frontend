@@ -48,7 +48,7 @@ export default function RegisterPage() {
           <Landmark className="w-6 h-6 text-primary" />
         </div>
         <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">
-          GUEHI
+        SmartBank
         </span>
       </Link>
 

@@ -21,7 +21,7 @@ export function Navbar() {
               <Landmark className="w-8 h-8 text-primary" />
             </div>
             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">
-              Smart Bank
+              SmartBank
             </span>
           </Link>
 
