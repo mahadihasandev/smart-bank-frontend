@@ -4,8 +4,11 @@ import { motion, Variants } from "framer-motion";
 import { ArrowRight, ShieldCheck, Zap, TrendingUp, Briefcase, Car, Home as HomeIcon, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
+import { useAuthStore } from "@/store/useAuthStore";
 
 export default function Home() {
+  const { user } = useAuthStore();
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -63,7 +66,7 @@ export default function Home() {
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link 
-              href="/register" 
+              href={user ? "/dashboard" : "/register"} 
               className="w-full sm:w-auto px-10 py-5 bg-primary text-primary-foreground font-bold rounded-full flex items-center justify-center gap-3 hover:bg-primary/90 hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] transition-all active:scale-95 text-xl group"
             >
               Apply for a Loan Now
@@ -164,7 +167,7 @@ export default function Home() {
                      <span className="font-bold text-lg">36 Months</span>
                    </div>
                  </div>
-                 <Link href="/register" className="w-full mt-8 py-4 bg-primary text-primary-foreground font-bold rounded-xl text-lg hover:bg-primary/90 transition-colors flex items-center justify-center">
+                 <Link href={user ? "/dashboard" : "/register"} className="w-full mt-8 py-4 bg-primary text-primary-foreground font-bold rounded-xl text-lg hover:bg-primary/90 transition-colors flex items-center justify-center">
                    Accept Offer
                  </Link>
                </div>
